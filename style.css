@@ -1,4 +1,4 @@
-/* Setup */
+/* Grundinställningar */
 
 * {
     margin: 0;
@@ -44,7 +44,7 @@ header {
     margin-bottom: -25px;
 }
 
-/* Navigeringsmeny */
+/* Navigering */
 
 nav {
     background: #111;
@@ -54,9 +54,8 @@ nav {
 
 nav ul {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    list-style: none
+    list-style: none;
 }
 
 nav li {
@@ -105,8 +104,6 @@ section p {
     text-align: center;
 }
 
-/* Hero */
-
 .hero {
     width: auto;
     height: 100%;
@@ -141,12 +138,12 @@ section p {
     color:white;
 }
 
-/* Formulär (namn, e-mail etc). */
+/* Formulär */
 
 form {
     width:100%;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width:400px;
+    margin: auto;
     display: flex;
     flex-direction: column;
 }
@@ -160,8 +157,6 @@ textarea {
     background: #b9b9b9;
     box-shadow: inset 0 0 5px #ffffff;
 }
-
-/* Submit Button */
 
 button {
     margin-top: 20px;
@@ -181,13 +176,11 @@ button {
 /* Bokning */
 
 .booking {
-    margin: 0 auto;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
-/* Bokningstext */
-
 .booking h2 {
+    text-align: center;
     margin-bottom: 16px;
 }
 
@@ -195,11 +188,11 @@ button {
     display: grid;
     grid-template-columns: 20px 320px 120px 120px;
     align-items: start;
-    text-align: start;
     column-gap: 20px;
     padding: 10px 10px 10px 0;
-    margin: 10px 0px;
+    margin: 10px auto;
     margin-bottom: 10px;
+    margin-left: -100px;
     border-radius: 8px;
 }
 
@@ -221,7 +214,7 @@ button {
     font-size: 18px;
 }
 
-/* Footer / Copyright */
+/* Footer */
 
 footer {
     background: #1d2022;
@@ -230,7 +223,7 @@ footer {
     padding: 16px;
 }
 
-/* Radioknappar / Checkboxes */
+/* Radioknappar */
 
 input[type="radio"] {
     appearance: none;
@@ -243,9 +236,8 @@ input[type="radio"] {
 
 input[type="radio"]:checked {
   border: 2px solid rgb(255, 255, 255);
-  box-shadow: inset 0 0 20px white;
+  box-shadow: inset 0 0 15px white;
 }
-
 .radio-group {
     display: flex;
     gap: 10px;
@@ -321,7 +313,7 @@ input[type="radio"]:checked {
 
 /* Om Oss */
 
-.about{
+.about {
     display:flex;
     justify-content:center;
     align-items:center;
@@ -330,32 +322,30 @@ input[type="radio"]:checked {
     flex-wrap:wrap;
 }
 
-.about-text{
+.about-text {
     max-width:600px;
     margin-top: 75px;
 }
 
-.about-text h2{
+.about-text h2 {
     font-size:42px;
     margin-top:-100px;
 }
 
-.about-text p{
+.about-text p {
     font-size:18px;
     line-height:1.8;
     margin-top:75px;
 }
 
-.about-image img{
+.about-image img {
     width:450px;
     border-radius:10px;
     box-shadow:0 15px 30px rgba(255, 255, 255, 0.2);
     transition:.5s;
 }
 
-/* Small Cards */
-
-.values{
+.values {
     display:flex;
     justify-content:center;
     gap:30px;
@@ -363,7 +353,7 @@ input[type="radio"]:checked {
     flex-wrap:wrap;
 }
 
-.value-card{
+.value-card {
     width:280px;
     padding:30px;
     background:rgb(46, 46, 46);
@@ -373,29 +363,27 @@ input[type="radio"]:checked {
     transition:.3s;
 }
 
-/* Team / Workers */
-
-.team{
+.team {
     padding:40px;
     text-align:center;
 }
 
-.team h2{
+.team h2 {
     margin-bottom:40px;
 }
 
-.team-members{
+.team-members {
     display:flex;
     justify-content:center;
     gap:40px;
     flex-wrap:wrap;
 }
 
-.member{
+.member {
     transition:.3s;
 }
 
-.member img{
+.member img {
     width:220px;
     height:220px;
     object-fit:cover;
@@ -403,38 +391,48 @@ input[type="radio"]:checked {
     margin-bottom:15px;
 }
 
-/* Hover */
+/* Hover-items */
 
-@media (hover: hover) {
-    nav a:hover {
-        box-shadow: inset 0 0 30px white;
-        color: white;
-        font-size: medium;
-        transform: scale(.95);
-    }
+.member:hover {
+    transform:scale(1.05);
+}
 
-    .card:hover .card-inner {
-        transform: rotateY(180deg);
-    }
+.value-card:hover {
+    transform:translateY(-5px);
+    box-shadow: inset 0 0 10px white;
+}
 
-    .about-image img:hover {
-        transform: scale(1.05);
-    }
+.about-image img:hover {
+    transform:scale(1.05);
+}
 
-    .value-card:hover {
-        transform: translateY(-5px);
-        box-shadow: inset 0 0 10px white;
-    }
+input[type="radio"]:not(:checked):hover {
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: inset 0 0 15px rgb(255, 255, 255);
+}
 
-    button:hover {
-        background: #616161;
-        box-shadow: inset 0 0 15px #ffffff;
-    }
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
 
-    input[type="radio"]:not(:checked):hover {
-        border: 2px solid white;
-        box-shadow: inset 0 0 15px white;
-    }
+nav a:hover {
+    box-shadow: inset 0 0 30px white;
+    color: rgb(255, 255, 255);
+    font-size:medium;
+    transform:scale(.95);
+}
+
+nav a:hover,
+nav a.active {
+    box-shadow: inset 0 0 30px white;
+    color: white;
+    font-weight: bold;
+    transform: scale(0.95);
+}
+
+button:hover {
+    background: #616161;
+    box-shadow: inset 0 0 15px #ffffff;
 }
 
 /* Responsiv design / Olika upplösningar */
@@ -442,7 +440,12 @@ input[type="radio"]:checked {
 @media (max-width:768px) {
 
     .service {
+        display: flex;
+        flex-direction: column;
         align-items: flex-start;
+        gap: 8px;
+        margin-left: auto;
+        align-self: center;
     }
 
     .service input[type="radio"] {
@@ -467,8 +470,16 @@ input[type="radio"]:checked {
         margin-top: 5px;
     }
 
-    .name, .time, .price {
-        text-align: center;   
+    .name {
+        align-self: center;        
+    }
+
+    .time {
+        align-self: center;
+    }
+
+    .price {
+        align-self: center;
     }
 
     nav ul {
@@ -513,7 +524,8 @@ input[type="radio"]:checked {
         width:100%;
         max-width:450px;
     }
-}    
+
+}
 
 @media (max-width: 1080px) {
     
@@ -540,7 +552,6 @@ input[type="radio"]:checked {
     }
 
 }
-
 
 @media (max-width:480px) {
 
@@ -629,5 +640,4 @@ input[type="radio"]:checked {
         width:100%;
         max-width:450px;
     }
-
 }
