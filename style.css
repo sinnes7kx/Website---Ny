@@ -1,4 +1,4 @@
-/* Grundinställningar */
+/* Setup */
 
 * {
     margin: 0;
@@ -44,7 +44,7 @@ header {
     margin-bottom: -25px;
 }
 
-/* Navigering */
+/* Navigeringsmeny */
 
 nav {
     background: #111;
@@ -54,8 +54,9 @@ nav {
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    list-style: none;
+    list-style: none
 }
 
 nav li {
@@ -69,23 +70,8 @@ nav a {
     transition: 0.66s;
 }
 
-nav a:hover {
-    box-shadow: inset 0 0 30px white;
-    color: rgb(255, 255, 255);
-    font-size:medium;
-    transform:scale(.95);
-}
-
 nav a.active {
     box-shadow: inset 0 0 30px white;
-    font-weight: bold;
-    transform: scale(0.95);
-}
-
-nav a:hover,
-nav a.active {
-    box-shadow: inset 0 0 30px white;
-    color: white;
     font-weight: bold;
     transform: scale(0.95);
 }
@@ -118,6 +104,8 @@ section p {
     font-size: 16px;
     text-align: center;
 }
+
+/* Hero */
 
 .hero {
     width: auto;
@@ -153,12 +141,12 @@ section p {
     color:white;
 }
 
-/* Formulär */
+/* Formulär (namn, e-mail etc). */
 
 form {
     width:100%;
-    max-width:400px;
-    margin: auto;
+    max-width: 400px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
@@ -172,6 +160,8 @@ textarea {
     background: #b9b9b9;
     box-shadow: inset 0 0 5px #ffffff;
 }
+
+/* Submit Button */
 
 button {
     margin-top: 20px;
@@ -188,19 +178,16 @@ button {
     box-shadow: inset 0 0 10px #ffffff;
 }
 
-button:hover {
-    background: #616161;
-    box-shadow: inset 0 0 15px #ffffff;
-}
-
 /* Bokning */
 
 .booking {
-    margin-bottom: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px
 }
 
+/* Bokningstext */
+
 .booking h2 {
-    text-align: center;
     margin-bottom: 16px;
 }
 
@@ -208,11 +195,11 @@ button:hover {
     display: grid;
     grid-template-columns: 20px 320px 120px 120px;
     align-items: start;
+    text-align: left;
     column-gap: 20px;
     padding: 10px 10px 10px 0;
-    margin: 10px auto;
+    margin: 10px 0px;
     margin-bottom: 10px;
-    margin-left: -100px;
     border-radius: 8px;
 }
 
@@ -234,7 +221,7 @@ button:hover {
     font-size: 18px;
 }
 
-/* Footer */
+/* Footer / Copyright */
 
 footer {
     background: #1d2022;
@@ -243,7 +230,7 @@ footer {
     padding: 16px;
 }
 
-/* Radioknappar */
+/* Radioknappar / Checkboxes */
 
 input[type="radio"] {
     appearance: none;
@@ -256,12 +243,7 @@ input[type="radio"] {
 
 input[type="radio"]:checked {
   border: 2px solid rgb(255, 255, 255);
-  box-shadow: inset 0 0 15px white;
-}
-
-input[type="radio"]:not(:checked):hover {
-  border: 2px solid rgb(255, 255, 255);
-  box-shadow: inset 0 0 15px rgb(255, 255, 255);
+  box-shadow: inset 0 0 20px white;
 }
 
 .radio-group {
@@ -312,10 +294,6 @@ input[type="radio"]:not(:checked):hover {
 
     transition: 1.22s;
     transform-style: flat;
-}
-
-.card:hover .card-inner {
-    transform: rotateY(180deg);
 }
 
 .card-front,
@@ -375,9 +353,7 @@ input[type="radio"]:not(:checked):hover {
     transition:.5s;
 }
 
-.about-image img:hover{
-    transform:scale(1.05);
-}
+/* Small Cards */
 
 .values{
     display:flex;
@@ -397,10 +373,7 @@ input[type="radio"]:not(:checked):hover {
     transition:.3s;
 }
 
-.value-card:hover{
-    transform:translateY(-5px);
-    box-shadow: inset 0 0 10px white;
-}
+/* Team / Workers */
 
 .team{
     padding:40px;
@@ -430,8 +403,38 @@ input[type="radio"]:not(:checked):hover {
     margin-bottom:15px;
 }
 
-.member:hover{
-    transform:scale(1.05);
+/* Hover */
+
+@media (hover: hover) {
+    nav a:hover {
+        box-shadow: inset 0 0 30px white;
+        color: white;
+        font-size: medium;
+        transform: scale(.95);
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .about-image img:hover {
+        transform: scale(1.05);
+    }
+
+    .value-card:hover {
+        transform: translateY(-5px);
+        box-shadow: inset 0 0 10px white;
+    }
+
+    button:hover {
+        background: #616161;
+        box-shadow: inset 0 0 15px #ffffff;
+    }
+
+    input[type="radio"]:not(:checked):hover {
+        border: 2px solid white;
+        box-shadow: inset 0 0 15px white;
+    }
 }
 
 /* Responsiv design / Olika upplösningar */
@@ -493,14 +496,6 @@ input[type="radio"]:not(:checked):hover {
         border-bottom: 1px solid #444;
     }
 
-    nav a:hover {
-        box-shadow: inset 0 0 30px white; 
-        color: rgb(255, 255, 255);
-        font-size:medium;
-        transform:scaleY(.95);
-        transform:scaleX(.95)
-    }
-
     section {
         width: 95%;
     }
@@ -531,41 +526,34 @@ input[type="radio"]:not(:checked):hover {
         width:100%;
         max-width:450px;
     }
-
-    html {
-        scroll-behavior:smooth;
-    }
-
-    img {
-        max-width:100%;
-        height:auto;
-    }
+}    
 
 @media (max-width: 1080px) {
     
-.card {
-    width: 200px;
-    max-width: 200px;
-    height: 400px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    align-self: flex-start;
-}
-
-.card img {
-    width: 150px;
-    height: auto;
-    align-self: center;
-}
-
-.card-text h2 {
-    margin: 12px 5px;
-    margin-top: 36px;
-    margin-left: 1px
-}
+    .card {
+        width: 200px;
+        max-width: 200px;
+        height: 400px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        align-self: flex-start;
     }
+
+    .card img {
+        width: 150px;
+        height: auto;
+        align-self: center;
+    }
+
+    .card-text h2 {
+        margin: 12px 5px;
+        margin-top: 36px;
+        margin-left: 1px
+    }
+
 }
+
 
 @media (max-width:480px) {
 
@@ -624,14 +612,6 @@ input[type="radio"]:not(:checked):hover {
         border-bottom: 1px solid #444;
     }
 
-    nav a:hover {
-        box-shadow: inset 0 0 30px white; 
-        color: rgb(255, 255, 255);
-        font-size:medium;
-        transform:scaleY(.95);
-        transform:scaleX(.95)
-    }
-
     section {
         width: 95%;
     }
@@ -662,14 +642,5 @@ input[type="radio"]:not(:checked):hover {
         width:100%;
         max-width:450px;
     }
-
-    html {
-        scroll-behavior:smooth;
-    }
-
-    img {
-        max-width:100%;
-        height:auto;
-    }    
 
 }
