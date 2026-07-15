@@ -284,8 +284,8 @@ input[type="radio"]:not(:checked):hover {
 }
 
 .card {
-    width: 300px;
-    max-width: 300px;
+    width: 200px;
+    max-width: 200px;
     height: 400px;
     display: flex;
     align-items: flex-start;
@@ -294,14 +294,15 @@ input[type="radio"]:not(:checked):hover {
 }
 
 .card img {
-    width: 300px;
+    width: 150px;
     height: auto;
     align-self: center;
 }
 
 .card-text h2 {
-    margin: 12px 10px;
+    margin: 12px 5px;
     margin-top: 36px;
+    margin-left: 1px
 }
 
 .card-inner {
