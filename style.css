@@ -93,7 +93,6 @@ nav a {
     border-radius: 6px;
 
     transition: var(--transitionslow);
-    transform: var(--transitionslow);
 }
 
 nav a:hover,
@@ -206,7 +205,6 @@ button {
     box-shadow: var(--glow);
 
     transition: var(--transitionslow);
-    transform: var(--transitionslow);
 }
 
 button:hover {
@@ -387,7 +385,6 @@ input[type="radio"]:not(:checked):hover {
     box-shadow: 0 15px 30px var(--shadow);
 
     transition: var(--transitionslow);
-    transform: var(--transitionslow);
 }
 
 .about-image img:hover {
@@ -415,7 +412,6 @@ input[type="radio"]:not(:checked):hover {
     text-align: center;
 
     transition: var(--transitionslow);
-    transform: var(--transitionslow);
     box-shadow: var(--transition);
 }
 
