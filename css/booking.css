@@ -40,6 +40,8 @@ button {
     transition: var(--transition);
 }
 
+/* On hover effect */
+
 button:hover,
 button:focus-visible {
     background:#616161;
@@ -71,6 +73,7 @@ button:focus-visible {
     border-radius: var(--radius);
 }
 
+/* Multiple elements with the same settings */
 .name,
 .time,
 .price {
