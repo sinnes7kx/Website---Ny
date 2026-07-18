@@ -301,20 +301,6 @@ input[type="radio"]:not(:checked):hover {
     line-height: 1.6;
 }
 
-/* Smooth animations */
-
-input:hover::placeholder {
-    color: gray;
-    opacity: 0.5;
-    transition: 1s;
-}
-
-textarea:hover::placeholder {
-    color: gray;
-    opacity: 0.5;
-    transition: 1s;
-}
-
 /* Services, Cards */
 
 .services {
@@ -354,11 +340,7 @@ textarea:hover::placeholder {
     height: 100%;
 
     transform-style: preserve-3d;
-<<<<<<< HEAD
     transition: 1.5s;   
-=======
-    transition: 1.5s;
->>>>>>> 6bad03ac79c1acc7d53cc81575a8376e297a80cd
 }
 
 .card-front,
@@ -386,6 +368,20 @@ textarea:hover::placeholder {
 
 .card:hover .card-inner {
     transform: rotateY(180deg);
+}
+
+/* Smooth animations */
+
+input:hover::placeholder {
+    color: gray;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+textarea:hover::placeholder {
+    color: gray;
+    opacity: 0.5;
+    transition: 1s;
 }
 
 /* Om Oss */
