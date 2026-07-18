@@ -1,56 +1,131 @@
 <!DOCTYPE html>
 <html lang="sv">
+
+
+        <!-- -------------------- SEO Improvements ---------------------->
+         
+<script type="application/ld+json">
+
+{
+ "@context":"https://schema.org",
+ "@type":"HairSalon",
+
+ "name":"Your Hair Salon",
+
+ "description":
+ "Professional hair salon offering haircuts and styling.",
+
+ "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Stockholm",
+    "addressCountry":"SE"
+ },
+
+ "openingHours":
+ [
+    "Mo-Fr 10:00-19:00",
+    "Sa 10:00-15:00"
+ ]
+
+}
+
+</script>
+
+        <!-------------------------------------------------------------->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+
+        <!-- -------------------- SEO Improvements ---------------------->
+
+    <title>Find us | Location & Opening Hours</title>
+
+    <meta name="description" content="Professional hair salon offering haircuts, styling, coloring and personalized hair treatments. Book your appointment today.">
+
+        <meta property="og:title"
+        content="Hair Salon Stockholm | Professional Styling">
+
+        <meta property="og:description"
+        content="Professional haircuts, coloring and styling. Book your appointment today.">
+
+        <meta property="og:type"
+        content="website">
+
+        <meta property="og:image"
+        content="images/logo.png">
+
+        <meta property="og:url"
+        content="https://sinnes7kx.github.io/WebsiteHair/index.html">
+
+        <link 
+            rel="icon"
+            type="images/s1.png"
+            href="images/favicon.png">
+
+        <!-------------------------------------------------------------->
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
 </head>
 <body>
     
 <!-- Header med logo -->
 
     <header>
-        <img src="images/logo.png" alt="Logotyp" class="logo">
+        <img src="images/logo.png" alt="logo hair salon scissors" class="logo">
     </header>
 
 <!-- Navigeringsmeny -->
  
-    <nav>
-        
+    <nav aria-label="Main Navigation">
+
         <ul>
             <li><a href="index.html">Hem</a></li>
             <li><a href="omoss.html">Om Oss</a></li>
             <li><a href="contact.html">Kontakta Oss</a></li>
             <li><a href="bokning.html">Boka Tid</a></li>
-            <li><a href="aktuellt.html" class="active">Hitta Hit</a></li>
+            <li><a href="aktuellt.html" class="active" aria-current="page">Hitta Hit</a></li>
         </ul>
     </nav>
-<!-- Navigeringsmeny -->
+
+<!-- Telefon, adress, öppettider -->
 
 <section class="info-section">
 
-    <div class="info-box">
+    <address class="info-box">
         <h3>Kontakt</h3>
         <p>📞 070-123 45 67</p>
         <p><a href="contact.html">✉️ Kontakta Oss</a></p>
-    </div>
+    </address>
 
-    <div class="info-box">
+    <address class="info-box">
         <h3>Adress</h3>
         <p>📍 Storgatan 12</p>
         <p>123 45 Stockholm</p>
         <p><sub><a href="https://share.google/HzVlNQoQtCGylVDH0" target="_blank">🗺️ Google Maps</a></sub></p>
-    </div>
+    </address>
 
-    <div class="info-box">
+    <address class="info-box">
         <h3>Öppettider</h3>
         <p>Mån–Fre: 10:00–19:00</p>
         <p>Lör: 10:00–15:00</p>
         <p>Sön: 10:00-15:00</p>
-    </div>
+    </address>
     
 </section>
+
+<!-- Footer -->
 
     <footer>
         <p>&copy; 2026 Min Hemsida. Alla rättigheter förbehållna.</p>
