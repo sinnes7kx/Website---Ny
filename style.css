@@ -90,14 +90,13 @@ nav a {
     color: var(--text);
     padding: 12px 20px;
     border-radius: var(--radius);
-
+    font-weight: bold;
     transition: var(--transition);
 }
 
 nav a:hover,
 nav a.active {
     box-shadow: var(--glow30);
-    font-weight: bold;
     transform: scale(.95);
 }
 
