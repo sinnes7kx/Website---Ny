@@ -301,6 +301,20 @@ input[type="radio"]:not(:checked):hover {
     line-height: 1.6;
 }
 
+/* Smooth animations */
+
+input:hover::placeholder {
+    color: gray;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+textarea:hover::placeholder {
+    color: gray;
+    opacity: 0.5;
+    transition: 1s;
+}
+
 /* Services, Cards */
 
 .services {
