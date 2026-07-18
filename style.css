@@ -22,8 +22,7 @@
     --radius: 10px;
     --radius-lg: 15px;
 
-    --transition: .66s preserve-3d;
-    --transitionslow: .66s ease;
+    --transition: .66s ease;
 }
 
 /* Basics */
@@ -90,9 +89,9 @@ nav a {
     display: block;
     color: var(--text);
     padding: 12px 20px;
-    border-radius: 6px;
+    border-radius: var(--radius);
 
-    transition: var(--transitionslow);
+    transition: var(--transition);
 }
 
 nav a:hover,
@@ -127,30 +126,29 @@ section img {
 
 section p {
     font-size: 16px;
-    text-align: center;
 }
 
 /* Hero */
 
 .hero {
-    margin: 0;
-    border-radius: 0;
-    box-shadow: var(--glow);
-
-    background-size: cover;
-    background-position: center;
+    position: relative;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    position: relative;
+    margin: 0;
+    border-radius: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: var(--glow);
 }
 
 .hero-logo {
     position: absolute;
-    width: 150px;
     bottom: 20px;
     right: 20px;
 }
@@ -200,16 +198,16 @@ button {
     color: var(--text);
 
     border: 1px solid var(--text);
-    border-radius: 5px;
+    border-radius: var(--radius);
 
     box-shadow: var(--glow);
 
-    transition: var(--transitionslow);
+    transition: var(--transition);
 }
 
 button:hover {
     background: #616161;
-    box-shadow: var(--glow10);
+    box-shadow: var(--glow);
 }
 
 /* Booking */
@@ -224,24 +222,25 @@ button:hover {
 
 .service {
     display: grid;
-    grid-template-columns: 20px 320px 120px 120px;
+    grid-template-columns: 15px 320px 120px 120px;
 
     align-items: start;
     justify-content: center;
 
-    column-gap: 20px;
+    column-gap: 15px;
 
     padding: 10px 0;
     margin: 10px auto;
 
-    border-radius: 8px;
+    border-radius: var(--radius);
 }
 
 .name,
 .time,
 .price {
+    font-size: 20px;
+
     text-align: center;
-    font-size: 1.25rem;
     font-weight: lighter;
     font-style: oblique;
 }
@@ -250,6 +249,8 @@ button:hover {
 
 input[type="radio"] {
     appearance: none;
+    margin-left: -100px;
+    justify-self: start;
 
     width: 20px;
     height: 20px;
@@ -259,9 +260,8 @@ input[type="radio"] {
 
     background: transparent;
 
-    transition: 
-    box-shadow var(--transition),
-    border-color var(--transition),
+    transition: var(--transition);
+    box-shadow: var(--shadow);
 }
 
 input[type="radio"]:checked {
@@ -273,31 +273,6 @@ input[type="radio"]:not(:checked):hover {
 }
 
 /* Info */
-
-.map-image {
-    width: 100%;
-    max-width: 300px;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
-    align-self: center;
-}
-
-.map {
-    
-    box-shadow: var(--glow-dark);
-    align-self: center;
-    max-width: 600px;
-    margin: 50px 40px 10px 385px
-
-}
-
-.map iframe {
-    width: 100%;
-    border-radius: 15px;
-    align-self: center;
-    border-top: 1px solid var(--border);
-}
 
 .info-section {
     display: flex;
@@ -341,15 +316,12 @@ input[type="radio"]:not(:checked):hover {
 }
 
 .card {
+    display: flex;
     width: 200px;
     height: 400px;
-
-    display: flex;
-    align-items: flex-start;
     gap: 20px;
-
+    align-items: flex-start;
     perspective: 1000px;
-
 }
 
 .card img {
@@ -358,7 +330,8 @@ input[type="radio"]:not(:checked):hover {
 }
 
 .card-text h2 {
-    margin: 36px 5px 12px 1px;
+    flex: 1;
+    line-height: 2.8;
 }
 
 .card-inner {
@@ -438,7 +411,7 @@ input[type="radio"]:not(:checked):hover {
 
     box-shadow: 0 15px 30px var(--shadow);
 
-    transition: var(--transitionslow);
+    transition: var(--transition);
 }
 
 .about-image img:hover {
@@ -465,8 +438,8 @@ input[type="radio"]:not(:checked):hover {
 
     text-align: center;
 
-    transition: var(--transitionslow);
-    box-shadow: var(--transition);
+    transition: var(--transition);
+    box-shadow: var(--shadow);
 }
 
 .value-card:hover {
@@ -493,7 +466,7 @@ input[type="radio"]:not(:checked):hover {
 }
 
 .member {
-    transition: var(--transitionslow);
+    transition: var(--transition);
 }
 
 .member:hover {
@@ -551,6 +524,7 @@ footer {
 
     .service input[type="radio"] {
         margin-bottom: 5px;
+        margin-left: 0;
     }
 
     .name,
@@ -592,7 +566,6 @@ footer {
     .about-image img {
         width: 100%;
         max-width: 450px;
-        justify-content: center;
     }
 
     .values {
