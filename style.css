@@ -93,15 +93,16 @@ nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 nav a {
     display: block;
     color: var(--text);
-    padding: 12px 20px;
+    padding: 12px 12px;
     font-weight: bold;
     border-radius: var(--radius);
+    white-space: nowrap;
 
     transition: var(--transition);
 }
