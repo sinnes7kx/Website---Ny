@@ -1,30 +1,95 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min Hemsida</title>
+    
+        <!-- -------------------- SEO Improvements ---------------------->
+         
+<script type="application/ld+json">
 
-    <link rel="stylesheet" href="style.css">
+{
+ "@context":"https://schema.org",
+ "@type":"HairSalon",
+
+ "name":"Hårsalong Stockholm",
+
+ "description":
+ "Professional hair salon offering haircuts and styling.",
+
+ "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Stockholm",
+    "addressCountry":"SE"
+ },
+
+ "openingHours":
+ [
+    "Mo-Fr 10:00-19:00",
+    "Sa 10:00-15:00"
+ ]
+
+}
+
+</script>
+    
+        <!---->
+    
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- -------------------- SEO Improvements ---------------------->    
+    <title>Hair Salon Stockholm | Professional Haircuts & Styling</title>
+
+    <meta name="description" content="Professional hair salon offering haircuts, styling, coloring and personalized hair treatments. Book your appointment today.">
+
+        <meta property="og:title"
+        content="Hair Salon Stockholm | Professional Styling">
+
+        <meta property="og:description"
+        content="Professional haircuts, coloring and styling. Book your appointment today.">
+
+        <meta property="og:type"
+        content="website">
+
+        <meta property="og:image"
+        content="images/logo.png">
+
+        <meta property="og:url"
+        content="https://sinnes7kx.github.io/WebsiteHair/index.html">
+
+        <link 
+        rel="icon"
+        type="images/s1.png"
+        href="images/favicon.png">
+
+        <!------------------------------ CSS -------------------------------->
+
+    <link rel="stylesheet" href="style.css"
+    
+        <!------------------------------------------------------------------------->
+
+    
 </head>
+
 <body>
 
 <!-- Header med logo -->
 
     <header>
-        <img src="images/logo.png" alt="Logotyp" class="logo">
+        <img src="images/logo.png" alt="logo hair salon scissors" class="logo">
     </header>
 
 <!-- Navigeringsmeny -->
  
-    <nav>
+    <nav aria-label="Main Navigation"> <!-- "Aria-label" för 'screen readers' (verktyg för synskadade som berättar var på hemsidan du befinner dig) -->
         
         <ul>
-            <li><a href="index.html" class="active">Hem</a></li>
+            <li><a href="index.html" class="active" aria-current="page">Hem</a></li>
             <li><a href="omoss.html">Om Oss</a></li>
             <li><a href="contact.html">Kontakta Oss</a></li>
             <li><a href="bokning.html">Boka Tid</a></li>
             <li><a href="aktuellt.html">Aktuellt</a></li>
+            <li><a href="hittahit.html">Hitta Hit</a></li>
         </ul>
         
     </nav>
@@ -33,6 +98,8 @@
 
 <section class="services">
 
+<!-- Card text -->
+
 <div class="card-text">
         <h2>Herrklippning</h2>
         <h2>Damklippning</h2>
@@ -40,13 +107,15 @@
         <h2>Färg</h2>
         <h2>Slingor</h2>
     </div>
-
-<div class="card">
+    
+<!-- Card 1 -->
+    
+<article class="card">
 
     <div class="card-inner">
 
         <div class="card-front">
-            <img src="images/zoom1.png" alt="girl with long brown stylish hair">
+            <img src="images/zoom1.png" alt="girl with long brown stylish hair">     <!-- SEO (and the ones below) -->
 
             </div>
 
@@ -57,9 +126,11 @@
 
     </div>
 
-</div>
-
-<div class="card">
+</article>
+    
+<!-- Card 2 -->
+    
+<article class="card">
 
     <div class="card-inner">
 
@@ -75,14 +146,16 @@
 
     </div>
 
-</div>
-
-<div class="card">
+</article>
+    
+<!-- Card 3 -->
+    
+<article class="card">
 
     <div class="card-inner">
 
         <div class="card-front">
-            <img src="images/zoom3.png" alt="girl cosplaying 2B from NieR: Automata showing her hair">
+            <img src="images/zoom3.png" alt="girl cosplaying 2B from NieR: Automata showing her hair"> 
             </div>
 
         <div class="card-back">
@@ -91,15 +164,11 @@
         </div>
 
     </div>
-</div>
 
-<div class="card-text">
+</article>
 
-<br>
-    
-</div>
 </section>
-<br><br>
+    
 <!-- Andra sektionen -->
 
     <section id="about">
